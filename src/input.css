@@ -1,3 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-bebas text-7xl leading-[64px] text-black;
+  }
+
+  h2 {
+    @apply font-bebas text-[40px] leading-10 text-black;
+  }
+
+  h3 {
+    @apply block font-bebas text-2xl leading-6;
+  }
+
+  h4 {
+    @apply font-bebas text-lg leading-6;
+  }
+
+  h5 {
+    @apply font-titillium text-sm leading-6 text-white;
+  }
+
+  .input {
+    @apply text-gray font-titillium text-sm leading-6;
+  }
+
+  .xs {
+    @apply text-green font-titillium text-xs font-bold leading-4;
+  }
+
+  .link {
+    @apply hover:text-gray font-titillium text-[13px] font-bold leading-4 text-white underline;
+  }
+}
