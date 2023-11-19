@@ -8,6 +8,35 @@
   </head>
   <body>
     <div id="header"></div>
+    <main class="grid grid-cols-12">
+      <h1 class="col-start-3 col-end-11 my-14">Shopping cart</h1>
+      <table class="col-start-3 col-end-11 text-black">
+        <tr class="text-left">
+          <th class="pb-4">
+            <h5>Item</h5>
+          </th>
+          <th class="pb-4 pl-12 pr-16 text-center"><h5>Qty</h5></th>
+          <th class="pb-4 uppercase"><h5>Subtotal</h5></th>
+        </tr>
+        <tr class="border-y-2 border-y-white align-top" id="cart-item-1"></tr>
+        <tr class="border-y-2 border-y-white align-top" id="cart-item-2"></tr>
+      </table>
+      <form class="col-start-3 col-end-7 mt-11">
+        <input
+          type="text"
+          placeholder="Enter Discount Code"
+          name="search"
+          class="input ml-3 border-2 border-black py-3 pl-4"
+        />
+        <button type="submit" class="-ml-1.5 border-2 border-black">
+          <h4 class="px-6 py-3">Apply</h4>
+        </button>
+      </form>
+      <button class="col-start-9 col-end-11 mt-11 bg-black py-3 text-white">
+        <h4>Update shopping cart</h4>
+      </button>
+    </main>
+    <div id="footer"></div>
     <script defer src="src/script/script.js"></script>
   </body>
 </html>

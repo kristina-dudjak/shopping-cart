@@ -21,7 +21,7 @@
   }
 
   h5 {
-    @apply font-titillium text-sm leading-6 text-white;
+    @apply font-titillium text-sm leading-6;
   }
 
   .input {
@@ -33,6 +33,6 @@
   }
 
   .link {
-    @apply hover:text-gray font-titillium text-[13px] font-bold leading-4 text-white underline;
+    @apply hover:text-gray font-titillium text-[13px] font-bold uppercase leading-4 text-white underline;
   }
 }
