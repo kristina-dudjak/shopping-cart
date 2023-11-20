@@ -25,3 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error fetching footer:', error));
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('../../summary.html').then(response => response.text()).then(data => {
+        document.getElementById('summary').innerHTML=data;
+    })
+    .catch(error => console.error('Error fetching summary:', error));
+})
