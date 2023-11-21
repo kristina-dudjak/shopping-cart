@@ -1,15 +1,62 @@
 <!doctype html>
 <html lang="en">
   <body>
-    <div>
+    <div class="absolute">
       <h2 class="mb-4">Summary</h2>
       <div class="text-black">
-        <div class="flex items-center justify-between bg-white px-6 py-4">
-          <h4>ESTIMATE SHIPPING AND TAX</h4>
-          <svg class="h-4 w-4">
+        <div
+          class="flex cursor-pointer items-center justify-between bg-white px-6 py-4"
+          id="shipping-box"
+        >
+          <h4 id="shipping-text">ESTIMATE SHIPPING AND TAX</h4>
+          <svg id="expand" class="h-4 w-4">
             <use xlink:href="src/assets/icons.svg#expand"></use>
           </svg>
+          <svg id="hide" class="hidden h-4 w-4">
+            <use xlink:href="src/assets/icons.svg#hide"></use>
+          </svg>
         </div>
+        <form class="mb-8 mt-6 hidden" id="shipping-info">
+          <label for="country"> <h5 class="font-bold">Country</h5></label>
+          <div class="relative mb-4 mt-2 inline-block">
+            <select
+              class="appearance-none border-2 border-black px-4 py-2 pr-8"
+              name="country"
+            >
+              <option value="united-states"><h5>United States</h5></option>
+            </select>
+            <svg
+              class="pointer-events-none absolute right-0 top-0 mr-3 mt-5 h-4 w-4"
+            >
+              <use xlink:href="src/assets/icons.svg#dropdown"></use>
+            </svg>
+          </div>
+          <label for="state"><h5 class="font-bold">State/Province</h5></label>
+          <input
+            class="border-gray mb-4 mt-2 border-2"
+            name="state"
+            type="text"
+          />
+          <label for="zip"> <h5 class="font-bold">Zip/Postal Code</h5></label>
+          <input
+            class="border-gray mb-8 mt-2 border-2"
+            name="zip"
+            type="text"
+          />
+          <label for="flat-rate"> <h5 class="font-bold">Flat Rate</h5></label>
+          <div class="flex items-center">
+            <input
+              class="mx-4 accent-black"
+              name="flat-rate"
+              type="radio"
+              checked
+            />
+            <div class="flex items-center gap-1">
+              <h5 class="font-bold">Fixed</h5>
+              <p class="xs text-gray">($5.00)</p>
+            </div>
+          </div>
+        </form>
         <div class="my-px bg-white px-6 py-4">
           <div class="flex justify-between">
             <h4>Subtotal</h4>
