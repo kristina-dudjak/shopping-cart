@@ -5,7 +5,7 @@
 
 @layer base {
   h1 {
-    @apply font-bebas text-7xl leading-[64px] text-black;
+    @apply font-bebas text-[22px] leading-[64px] text-black lg:text-7xl;
   }
 
   h2 {
@@ -13,7 +13,7 @@
   }
 
   h3 {
-    @apply block font-bebas text-2xl leading-6;
+    @apply block font-bebas text-lg leading-6 lg:text-2xl;
   }
 
   h4 {
@@ -21,7 +21,15 @@
   }
 
   h5 {
-    @apply font-titillium text-sm leading-6;
+    @apply font-bebas text-base leading-6 lg:text-lg;
+  }
+
+  h6 {
+    @apply font-titillium text-xs leading-6 lg:text-sm;
+  }
+
+  .text-s {
+    @apply font-titillium text-sm leading-6 lg:text-base;
   }
 
   .input {
@@ -29,10 +37,10 @@
   }
 
   .xs {
-    @apply text-green font-titillium text-xs font-bold leading-4;
+    @apply text-green font-titillium text-[10px] font-bold leading-4 lg:text-xs;
   }
 
   .link {
-    @apply hover:text-gray font-titillium text-[13px] font-bold uppercase leading-4 text-white underline;
+    @apply hover:text-gray font-titillium text-[10px] font-bold uppercase leading-4 text-white underline lg:text-[13px];
   }
 }

@@ -4,112 +4,118 @@
     <header>
       <div class="grid grid-cols-12 bg-black">
         <div
-          class="col-start-2 col-end-12 flex items-center justify-between py-3 text-white"
+          class="col-span-full mx-2 flex items-center justify-between py-3 text-white xl:col-start-2 xl:col-end-12"
         >
-          <h5>Contact our Customer Service</h5>
-          <div class="flex items-center gap-4">
-            <svg class="h-4 w-4">
-              <use xlink:href="src/assets/icons.svg#phone"></use>
-            </svg>
-            <h5 class="font-bold">(800) 333-3567</h5>
+          <div class="flex items-center gap-1 lg:gap-3">
+            <h6 class="hidden lg:inline">Contact our Customer Service</h6>
+            <div class="flex items-center gap-4">
+              <svg class="h-4 w-4">
+                <use xlink:href="src/assets/icons.svg#phone"></use>
+              </svg>
+              <h6 class="hidden font-bold lg:inline">(800) 333-3567</h6>
+            </div>
+            <nav>
+              <ul class="flex items-center gap-1 font-bold lg:gap-3">
+                <li class="flex items-center gap-1 lg:gap-3">
+                  <svg class="h-1.5 w-1.5">
+                    <use xlink:href="src/assets/icons.svg#oval"></use>
+                  </svg>
+                  <a class="link" href="#">About us</a>
+                </li>
+                <li class="flex items-center gap-1 lg:gap-3">
+                  <svg class="h-1.5 w-1.5">
+                    <use xlink:href="src/assets/icons.svg#oval"></use>
+                  </svg>
+                  <a class="link" href="#">Contact us</a>
+                </li>
+                <li class="flex items-center gap-1 lg:gap-3">
+                  <svg class="h-1.5 w-1.5">
+                    <use xlink:href="src/assets/icons.svg#oval"></use>
+                  </svg>
+                  <a class="link" href="#">Where to buy</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav>
-            <ul class="flex items-center gap-3 font-bold">
-              <li class="flex items-center gap-3">
-                <svg class="h-1.5 w-1.5">
-                  <use xlink:href="src/assets/icons.svg#oval"></use>
-                </svg>
-                <a class="link" href="#">About us</a>
-              </li>
-              <li class="flex items-center gap-3">
-                <svg class="h-1.5 w-1.5">
-                  <use xlink:href="src/assets/icons.svg#oval"></use>
-                </svg>
-                <a class="link" href="#">Contact us</a>
-              </li>
-              <li class="flex items-center gap-3">
-                <svg class="h-1.5 w-1.5">
-                  <use xlink:href="src/assets/icons.svg#oval"></use>
-                </svg>
-                <a class="link" href="#">Where to buy</a>
-              </li>
-            </ul>
-          </nav>
-          <h5>Promo message area - shipping advantages, special offers…</h5>
-          <a href="#" class="hover:text-gray flex items-center gap-[8.71px]">
+          <h6 class="hidden lg:inline lg:max-w-[300px] xl:max-w-none">
+            Promo message area - shipping advantages, special offers…
+          </h6>
+          <a href="#" class="hover:text-gray flex items-center gap-2">
             <svg class="h-4 w-3">
               <use xlink:href="src/assets/icons.svg#user"></use>
             </svg>
-            <h4>Sign in</h4>
+            <h5>Sign in</h5>
           </a>
         </div>
       </div>
-      <div class="grid grid-cols-12 shadow-md">
+      <div class="grid grid-cols-12 lg:shadow-md">
         <div
-          class="col-start-2 col-end-12 flex items-center justify-between py-6"
+          class="col-span-full flex items-center justify-between py-6 xl:col-start-2 xl:col-end-12"
         >
-          <svg class="h-9 w-[154px]">
-            <use xlink:href="src/assets/icons.svg#inchoo"></use>
-          </svg>
-          <nav>
+          <div class="flex gap-4">
+            <svg class="ml-2 inline h-10 w-10 text-white lg:hidden">
+              <use xlink:href="src/assets/icons.svg#menu"></use>
+            </svg>
+            <svg class="h-9 w-40">
+              <use xlink:href="src/assets/icons.svg#inchoo"></use>
+            </svg>
+          </div>
+          <nav class="hidden lg:inline">
             <ul class="flex gap-10">
               <li class="flex gap-3 text-black hover:text-orange">
-                <a class="flex gap-3" href="#">
-                  <svg class="h-[52px] w-[23px]">
+                <a class="flex items-center gap-3" href="#">
+                  <svg class="h-[52px] w-6">
                     <use xlink:href="src/assets/icons.svg#line"></use>
                   </svg>
-                  <h3>
-                    SOFT TOP <br />
-                    PRODUCTS
-                  </h3>
+                  <h3 class="max-w-[100px]">SOFT TOP PRODUCTS</h3>
                 </a>
               </li>
               <li class="flex gap-3 text-black hover:text-orange">
-                <a class="flex gap-3" href="#">
-                  <svg class="h-[52px] w-[23px]">
+                <a class="flex items-center gap-3" href="#">
+                  <svg class="h-[52px] w-6">
                     <use xlink:href="src/assets/icons.svg#line"></use>
                   </svg>
-                  <h3>
-                    JEEP <br />
-                    ACCESSORIES
-                  </h3>
+                  <h3 class="max-w-[100px]">JEEP ACCESSORIES</h3>
                 </a>
               </li>
             </ul>
           </nav>
-
-          <form
-            class="hover:border-gray flex items-center border-2 border-black"
-          >
-            <input
-              type="text"
-              placeholder="Search entire store here…"
-              name="search"
-              class="input ml-3 border-none"
-            />
-            <button type="submit" class="m-4">
-              <svg class="h-4 w-4">
-                <use xlink:href="src/assets/icons.svg#search"></use>
-              </svg>
-            </button>
-          </form>
-
-          <div class="flex">
-            <button
-              class="bg-green flex items-center pb-2.5 pl-[24.59px] pr-[24.05px] pt-3.5 text-white"
+          <div class="flex gap-2 lg:gap-6">
+            <form
+              class="hover:border-gray flex items-center border-2 border-black bg-black lg:bg-white"
             >
-              <svg class="h-4 w-4">
-                <use xlink:href="src/assets/icons.svg#shopping-cart"></use>
+              <input
+                type="text"
+                placeholder="Search entire store here…"
+                name="search"
+                class="input ml-3 hidden border-none bg-white lg:inline"
+              />
+              <button
+                type="submit"
+                class="m-2.5 text-white lg:m-4 lg:text-black"
+              >
+                <svg class="h-4 w-4">
+                  <use xlink:href="src/assets/icons.svg#search"></use>
+                </svg>
+              </button>
+            </form>
+            <div class="flex">
+              <button
+                class="bg-green flex items-center p-3 text-white lg:px-6 lg:pb-2.5 lg:pt-3.5"
+              >
+                <svg class="bg-green h-4 w-4">
+                  <use xlink:href="src/assets/icons.svg#shopping-cart"></use>
+                </svg>
+                <h4 class="ml-2.5 mr-3.5 hidden lg:inline">MY CART</h4>
+                <svg class="hidden h-1.5 w-2 lg:inline">
+                  <use xlink:href="src/assets/icons.svg#dropdown"></use>
+                </svg>
+              </button>
+              <svg class="-ml-3 -mt-3 h-6 w-6 text-white lg:-ml-6">
+                <use xlink:href="src/assets/icons.svg#oval-1"></use>
               </svg>
-              <h4 class="ml-[10.2px] mr-[13.71px]">MY CART</h4>
-              <svg class="h-1.5 w-2">
-                <use xlink:href="src/assets/icons.svg#dropdown"></use>
-              </svg>
-            </button>
-            <svg class="-ml-6 -mt-3 h-6 w-6 text-white">
-              <use xlink:href="src/assets/icons.svg#oval-1"></use>
-            </svg>
-            <p class="xs -ml-4 -mt-2 h-6 w-6">2</p>
+              <p class="xs -ml-4 -mt-2 h-6 w-6">2</p>
+            </div>
           </div>
         </div>
       </div>

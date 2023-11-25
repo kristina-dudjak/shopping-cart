@@ -9,32 +9,56 @@
   <body>
     <header id="header"></header>
     <main class="grid grid-cols-12">
-      <h1 class="col-start-2 col-end-9 my-14">Shopping cart</h1>
-      <table class="col-start-2 col-end-9 text-black">
-        <tr class="text-left">
-          <th class="pb-4">
-            <h5>Item</h5>
-          </th>
-          <th class="pb-4 pl-12 pr-16 text-center"><h5>Qty</h5></th>
-          <th class="pb-4 uppercase"><h5>Subtotal</h5></th>
-        </tr>
-        <tr class="border-y-2 border-y-white align-top" id="cart-item-1"></tr>
-        <tr class="border-y-2 border-y-white align-top" id="cart-item-2"></tr>
-      </table>
-      <div id="summary" class="col-start-10 col-end-12"></div>
-      <form class="col-start-2 col-end-6 mt-11">
+      <h1 class="col-start-2 col-end-9 row-start-1 lg:my-14">Shopping cart</h1>
+      <div
+        class="col-span-full grid grid-cols-12 text-black lg:col-start-2 lg:col-end-9"
+      >
+        <h6 class="col-start-1 col-end-8 hidden pb-4 font-bold lg:inline">
+          Item
+        </h6>
+        <h6
+          class="hidden justify-self-center text-center font-bold lg:col-start-8 lg:col-end-10 lg:inline"
+        >
+          Qty
+        </h6>
+        <h6
+          class="hidden font-bold uppercase lg:col-start-10 lg:col-end-11 lg:inline lg:justify-self-center"
+        >
+          Subtotal
+        </h6>
+        <div
+          class="col-span-full mt-6 border-y-2 border-y-white align-top lg:m-0"
+          id="cart-item-1"
+        ></div>
+        <div
+          class="col-span-full border-y-2 border-y-white align-top"
+          id="cart-item-2"
+        ></div>
+      </div>
+      <div
+        id="summary"
+        class="col-span-full row-start-2 lg:col-start-10 lg:col-end-12 lg:row-start-auto"
+      ></div>
+      <form
+        class="col-span-full row-start-6 mx-2 mt-4 flex lg:col-start-2 lg:col-end-6 lg:row-start-3 lg:mx-0 lg:mt-11"
+      >
         <input
           type="text"
           placeholder="Enter Discount Code"
           name="search"
-          class="input ml-3 border-2 border-black py-3 pl-4"
+          class="input w-9/12 border-2 border-black py-3 pl-4 lg:ml-3 lg:w-6/12 xl:w-4/12"
         />
-        <button type="submit" class="-ml-1.5 border-2 border-black">
-          <h4 class="px-6 py-3">Apply</h4>
+        <button
+          type="submit"
+          class="-ml-0.5 w-3/12 border-2 border-black lg:-ml-0.5"
+        >
+          <h5 class="px-6 py-3">Apply</h5>
         </button>
       </form>
-      <button class="col-start-7 col-end-9 mt-11 bg-black py-3 text-white">
-        <h4>Update shopping cart</h4>
+      <button
+        class="col-span-full row-start-5 mx-2 mt-6 bg-black py-3 text-white lg:col-start-7 lg:col-end-9 lg:row-start-3 lg:mx-0 lg:mt-11"
+      >
+        <h5>Update shopping cart</h5>
       </button>
     </main>
     <div id="footer"></div>
