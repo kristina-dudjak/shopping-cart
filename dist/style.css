@@ -460,7 +460,6 @@ h2{
 }
 
 h3{
-  display: block;
   font-family: Bebas Neue;
   font-size: 1.125rem;
   line-height: 1.5rem;
@@ -502,65 +501,6 @@ h6{
   h6{
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-}
-
-.text-s{
-  font-family: Titillium Web;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 1024px){
-  .text-s{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.input{
-  font-family: Titillium Web;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(130 130 130 / var(--tw-text-opacity));
-}
-
-.xs{
-  font-family: Titillium Web;
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(0 132 33 / var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px){
-  .xs{
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-.link{
-  font-family: Titillium Web;
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(245 245 245 / var(--tw-text-opacity));
-  text-decoration-line: underline;
-}
-
-.link:hover{
-  --tw-text-opacity: 1;
-  color: rgb(130 130 130 / var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px){
-  .link{
-    font-size: 13px;
   }
 }
 
@@ -664,8 +604,36 @@ h6{
   --tw-backdrop-sepia:  ;
 }
 
-.pointer-events-none{
-  pointer-events: none;
+#expand{
+  display: none;
+}
+
+#collapse{
+  display: inline;
+  --tw-text-opacity: 1;
+  color: rgb(0 132 33 / var(--tw-text-opacity));
+}
+
+#shipping-text{
+  --tw-text-opacity: 1;
+  color: rgb(0 132 33 / var(--tw-text-opacity));
+}
+
+.estimate-hidden #expand{
+  display: inline;
+}
+
+.estimate-hidden #collapse{
+  display: none;
+}
+
+.estimate-hidden #shipping-text{
+  --tw-text-opacity: 1;
+  color: rgb(47 47 47 / var(--tw-text-opacity));
+}
+
+.collapse{
+  visibility: collapse;
 }
 
 .absolute{
@@ -700,16 +668,8 @@ h6{
   grid-column-start: 2;
 }
 
-.col-start-3{
-  grid-column-start: 3;
-}
-
 .col-start-9{
   grid-column-start: 9;
-}
-
-.col-end-11{
-  grid-column-end: 11;
 }
 
 .col-end-12{
@@ -788,14 +748,6 @@ h6{
   margin-left: -0.75rem;
 }
 
-.-ml-4{
-  margin-left: -1rem;
-}
-
-.-mt-2{
-  margin-top: -0.5rem;
-}
-
 .-mt-3{
   margin-top: -0.75rem;
 }
@@ -816,10 +768,6 @@ h6{
   margin-left: 0.5rem;
 }
 
-.ml-2\.5{
-  margin-left: 0.625rem;
-}
-
 .ml-3{
   margin-left: 0.75rem;
 }
@@ -830,10 +778,6 @@ h6{
 
 .mr-3{
   margin-right: 0.75rem;
-}
-
-.mr-3\.5{
-  margin-right: 0.875rem;
 }
 
 .mt-10{
@@ -856,8 +800,8 @@ h6{
   margin-top: 1.5rem;
 }
 
-.inline-block{
-  display: inline-block;
+.block{
+  display: block;
 }
 
 .inline{
@@ -956,16 +900,16 @@ h6{
   width: 75%;
 }
 
-.w-\[23px\]{
-  width: 23px;
-}
-
-.max-w-\[100px\]{
-  max-width: 100px;
+.max-w-\[120px\]{
+  max-width: 120px;
 }
 
 .max-w-xs{
   max-width: 20rem;
+}
+
+.flex-1{
+  flex: 1 1 0%;
 }
 
 .cursor-pointer{
@@ -986,12 +930,12 @@ h6{
   flex-direction: column;
 }
 
-.items-center{
-  align-items: center;
+.items-start{
+  align-items: flex-start;
 }
 
-.justify-center{
-  justify-content: center;
+.items-center{
+  align-items: center;
 }
 
 .justify-between{
@@ -1148,12 +1092,52 @@ h6{
   vertical-align: top;
 }
 
+.font-bebas{
+  font-family: Bebas Neue;
+}
+
+.font-titillium{
+  font-family: Titillium Web;
+}
+
+.text-\[10px\]{
+  font-size: 10px;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.leading-4{
+  line-height: 1rem;
+}
+
+.leading-6{
+  line-height: 1.5rem;
 }
 
 .text-black{
@@ -1166,9 +1150,18 @@ h6{
   color: rgb(130 130 130 / var(--tw-text-opacity));
 }
 
+.text-green{
+  --tw-text-opacity: 1;
+  color: rgb(0 132 33 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
+}
+
+.underline{
+  text-decoration-line: underline;
 }
 
 .accent-black{
@@ -1191,10 +1184,6 @@ h6{
 }
 
 @media (min-width: 1024px){
-  .lg\:absolute{
-    position: absolute;
-  }
-
   .lg\:col-start-1{
     grid-column-start: 1;
   }
@@ -1211,20 +1200,12 @@ h6{
     grid-column-start: 2;
   }
 
-  .lg\:col-start-3{
-    grid-column-start: 3;
-  }
-
-  .lg\:col-start-4{
-    grid-column-start: 4;
-  }
-
-  .lg\:col-start-7{
-    grid-column-start: 7;
-  }
-
   .lg\:col-start-8{
     grid-column-start: 8;
+  }
+
+  .lg\:col-start-9{
+    grid-column-start: 9;
   }
 
   .lg\:col-end-10{
@@ -1239,8 +1220,12 @@ h6{
     grid-column-end: 12;
   }
 
-  .lg\:col-end-6{
-    grid-column-end: 6;
+  .lg\:col-end-13{
+    grid-column-end: 13;
+  }
+
+  .lg\:col-end-7{
+    grid-column-end: 7;
   }
 
   .lg\:col-end-8{
@@ -1253,10 +1238,6 @@ h6{
 
   .lg\:row-start-3{
     grid-row-start: 3;
-  }
-
-  .lg\:row-start-auto{
-    grid-row-start: auto;
   }
 
   .lg\:m-0{
@@ -1317,6 +1298,10 @@ h6{
     margin-top: 1.5rem;
   }
 
+  .lg\:block{
+    display: block;
+  }
+
   .lg\:inline{
     display: inline;
   }
@@ -1361,10 +1346,6 @@ h6{
     justify-self: center;
   }
 
-  .lg\:justify-self-stretch{
-    justify-self: stretch;
-  }
-
   .lg\:bg-white{
     --tw-bg-opacity: 1;
     background-color: rgb(245 245 245 / var(--tw-bg-opacity));
@@ -1403,6 +1384,35 @@ h6{
     padding-top: 0.875rem;
   }
 
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-\[13px\]{
+    font-size: 13px;
+  }
+
+  .lg\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .lg\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
   .lg\:text-black{
     --tw-text-opacity: 1;
     color: rgb(47 47 47 / var(--tw-text-opacity));
@@ -1418,14 +1428,6 @@ h6{
 @media (min-width: 1280px){
   .xl\:col-start-2{
     grid-column-start: 2;
-  }
-
-  .xl\:col-start-4{
-    grid-column-start: 4;
-  }
-
-  .xl\:col-end-11{
-    grid-column-end: 11;
   }
 
   .xl\:col-end-12{

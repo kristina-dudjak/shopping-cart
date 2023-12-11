@@ -7,61 +7,607 @@
     <link rel="stylesheet" href="dist/style.css" type="text/css" />
   </head>
   <body>
-    <header id="header"></header>
-    <main class="grid grid-cols-12">
+    <header>
+      <div class="grid grid-cols-12 bg-black">
+        <div
+          class="col-span-full mx-2 flex items-center justify-between py-3 text-white xl:col-start-2 xl:col-end-12"
+        >
+          <div class="flex items-center gap-1 lg:gap-3">
+            <h6 class="hidden lg:block">Contact our Customer Service</h6>
+            <div class="flex items-center gap-4">
+              <svg class="h-4 w-4">
+                <use href="#phone"></use>
+              </svg>
+              <h6 class="hidden font-bold lg:block">(800) 333-3567</h6>
+            </div>
+            <nav>
+              <ul
+                class="flex items-center gap-1 font-titillium text-[10px] font-bold uppercase leading-4 text-white lg:gap-3 lg:text-[13px]"
+              >
+                <li class="flex items-center gap-1 lg:gap-3">
+                  <svg class="h-1.5 w-1.5">
+                    <use href="#oval"></use>
+                  </svg>
+                  <a class="underline hover:text-gray" href="#">About us</a>
+                </li>
+                <li class="flex items-center gap-1 lg:gap-3">
+                  <svg class="h-1.5 w-1.5">
+                    <use href="#oval"></use>
+                  </svg>
+                  <a class="underline hover:text-gray" href="#">Contact us</a>
+                </li>
+                <li class="flex items-center gap-1 lg:gap-3">
+                  <svg class="h-1.5 w-1.5">
+                    <use href="#oval"></use>
+                  </svg>
+                  <a class="underline hover:text-gray" href="#">Where to buy</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <h6 class="hidden lg:block lg:max-w-[300px] xl:max-w-none">
+            Promo message area - shipping advantages, special offers…
+          </h6>
+          <a
+            href="#"
+            class="flex items-center gap-2 font-bebas text-base leading-6 hover:text-gray lg:text-lg"
+          >
+            <svg class="h-4 w-3">
+              <use href="#user"></use>
+            </svg>
+            Sign in
+          </a>
+        </div>
+      </div>
+      <div class="grid grid-cols-12 lg:shadow-md">
+        <div
+          class="col-span-full flex items-center justify-between py-6 xl:col-start-2 xl:col-end-12"
+        >
+          <div class="flex gap-4">
+            <svg class="ml-2 inline h-10 w-10 text-white lg:hidden">
+              <use href="#menu"></use>
+            </svg>
+            <svg class="h-9 w-40">
+              <use href="#inchoo"></use>
+            </svg>
+          </div>
+          <nav class="hidden lg:block">
+            <ul class="flex gap-10 font-bebas text-lg leading-6 lg:text-2xl">
+              <li class="flex gap-3 text-black hover:text-orange">
+                <a href="#" class="flex items-center gap-3">
+                  <svg class="h-[52px] w-6">
+                    <use href="#line"></use>
+                  </svg>
+                  <span class="max-w-[120px]">SOFT TOP PRODUCTS</span>
+                </a>
+              </li>
+              <li class="flex gap-3 text-black hover:text-orange">
+                <a href="#" class="flex items-center gap-3">
+                  <svg class="h-[52px] w-6">
+                    <use href="#line"></use>
+                  </svg>
+                  <span class="max-w-[120px]">JEEP ACCESSORIES</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="flex gap-2 lg:gap-6">
+            <form
+              class="flex items-center border-2 border-black bg-black hover:border-gray lg:bg-white"
+            >
+              <input
+                type="text"
+                placeholder="Search entire store here…"
+                name="search"
+                class="ml-3 hidden border-none bg-white font-titillium text-sm leading-6 text-gray lg:inline"
+              />
+              <button
+                type="submit"
+                class="m-2.5 text-white lg:m-4 lg:text-black"
+              >
+                <svg class="h-4 w-4">
+                  <use href="#search"></use>
+                </svg>
+              </button>
+            </form>
+            <div class="flex">
+              <button
+                class="flex items-center gap-3 bg-green p-3 font-bebas text-lg leading-6 text-white lg:px-6 lg:pb-2.5 lg:pt-3.5"
+              >
+                <svg class="h-4 w-4 bg-green">
+                  <use href="#shopping-cart"></use>
+                </svg>
+                <span class="hidden lg:inline">MY CART</span>
+                <svg class="hidden h-1.5 w-2 lg:inline">
+                  <use href="#dropdown"></use>
+                </svg>
+              </button>
+              <svg class="-ml-3 -mt-3 h-6 w-6 text-white lg:-ml-6">
+                <use href="#oval-1"></use>
+                <text
+                  class="font-titillium text-[10px] font-bold leading-4 text-green lg:text-xs"
+                  x="50%"
+                  y="50%"
+                  fill="green"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                >
+                  2
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="grid grid-cols-12 items-start">
       <h1 class="col-start-2 col-end-9 row-start-1 lg:my-14">Shopping cart</h1>
-      <div
+      <main
         class="col-span-full grid grid-cols-12 text-black lg:col-start-2 lg:col-end-9"
       >
-        <h6 class="col-start-1 col-end-8 hidden pb-4 font-bold lg:inline">
+        <h6 class="col-start-1 col-end-8 hidden pb-4 font-bold lg:block">
           Item
         </h6>
         <h6
-          class="hidden justify-self-center text-center font-bold lg:col-start-8 lg:col-end-10 lg:inline"
+          class="hidden justify-self-center font-bold lg:col-start-8 lg:col-end-10 lg:block"
         >
           Qty
         </h6>
         <h6
-          class="hidden font-bold uppercase lg:col-start-10 lg:col-end-11 lg:inline lg:justify-self-center"
+          class="hidden font-bold uppercase lg:col-start-10 lg:col-end-11 lg:block lg:justify-self-center"
         >
           Subtotal
         </h6>
-        <div
-          class="col-span-full mt-6 border-y-2 border-y-white align-top lg:m-0"
-          id="cart-item-1"
-        ></div>
-        <div
-          class="col-span-full border-y-2 border-y-white align-top"
-          id="cart-item-2"
-        ></div>
-      </div>
-      <div
-        id="summary"
-        class="col-span-full row-start-2 lg:col-start-10 lg:col-end-12 lg:row-start-auto"
-      ></div>
-      <form
-        class="col-span-full row-start-6 mx-2 mt-4 flex lg:col-start-2 lg:col-end-6 lg:row-start-3 lg:mx-0 lg:mt-11"
-      >
-        <input
-          type="text"
-          placeholder="Enter Discount Code"
-          name="search"
-          class="input w-9/12 border-2 border-black py-3 pl-4 lg:ml-3 lg:w-6/12 xl:w-4/12"
-        />
-        <button
-          type="submit"
-          class="-ml-0.5 w-3/12 border-2 border-black lg:-ml-0.5"
+        <ul class="col-span-full">
+          <li
+            class="mt-6 grid grid-cols-12 items-center gap-4 border-y-2 border-y-white align-top lg:m-0 lg:items-start"
+          >
+            <div
+              class="col-span-full row-span-1 flex gap-4 py-3 lg:col-start-1 lg:col-end-8 lg:gap-12"
+            >
+              <img
+                alt="car model"
+                class="w-1/2"
+                src="src/assets/flip_top_frameless_.png"
+              />
+              <div class="flex w-1/2 flex-col gap-3.5 lg:gap-9">
+                <h5 class="max-w-xs">
+                  Flip Top™ Complete Replacement Soft Top, Jeep 1976-1995
+                  CJ-7/Wrangler, No doors included, Clear side and rear windows
+                </h5>
+                <div class="flex gap-1">
+                  <h6 class="font-bold">Color:</h6>
+                  <h6>Black Denim</h6>
+                </div>
+              </div>
+            </div>
+            <h6
+              class="col-start-2 col-end-4 block justify-self-center font-bold lg:hidden"
+            >
+              Qty
+            </h6>
+            <h6
+              class="col-start-9 col-end-12 block justify-self-end font-bold uppercase lg:col-start-10 lg:col-end-11 lg:hidden"
+            >
+              Subtotal
+            </h6>
+            <h6
+              class="col-start-2 col-end-4 justify-self-center border-2 border-black px-4 py-2 text-center lg:col-start-8 lg:col-end-10 lg:mt-3"
+            >
+              1
+            </h6>
+
+            <h6
+              class="col-start-9 col-end-12 justify-self-end font-bold lg:col-start-10 lg:col-end-11 lg:mt-6 lg:justify-self-center"
+            >
+              $150.00
+            </h6>
+
+            <div
+              class="col-start-10 col-end-12 mb-6 flex gap-4 justify-self-end lg:col-start-12 lg:mb-0 lg:mt-6"
+            >
+              <svg class="h-4 w-4 cursor-pointer">
+                <use href="#edit"></use>
+              </svg>
+              <svg class="h-4 w-4 cursor-pointer">
+                <use href="#remove"></use>
+              </svg>
+            </div>
+          </li>
+          <li
+            class="grid grid-cols-12 items-center gap-4 border-y-2 border-y-white align-top lg:items-start"
+          >
+            <div
+              class="col-span-full row-span-1 flex gap-4 py-3 lg:col-start-1 lg:col-end-8 lg:gap-12"
+            >
+              <img
+                alt="car model"
+                class="w-1/2"
+                src="src/assets/flip_top_frameless_.png"
+              />
+              <div class="flex w-1/2 flex-col gap-3.5 lg:gap-9">
+                <h5 class="max-w-xs">
+                  Flip Top™ Complete Replacement Soft Top, Jeep 1976-1995
+                  CJ-7/Wrangler, No doors included, Clear side and rear windows
+                </h5>
+                <div class="flex gap-1">
+                  <h6 class="font-bold">Color:</h6>
+                  <h6>Black Denim</h6>
+                </div>
+              </div>
+            </div>
+            <h6
+              class="col-start-2 col-end-4 block justify-self-center font-bold lg:hidden"
+            >
+              Qty
+            </h6>
+            <h6
+              class="col-start-9 col-end-12 block justify-self-end font-bold uppercase lg:col-start-10 lg:col-end-11 lg:hidden"
+            >
+              Subtotal
+            </h6>
+            <h6
+              class="col-start-2 col-end-4 justify-self-center border-2 border-black px-4 py-2 text-center lg:col-start-8 lg:col-end-10 lg:mt-3"
+            >
+              1
+            </h6>
+
+            <h6
+              class="col-start-9 col-end-12 justify-self-end font-bold lg:col-start-10 lg:col-end-11 lg:mt-6 lg:justify-self-center"
+            >
+              $150.00
+            </h6>
+
+            <div
+              class="col-start-10 col-end-12 mb-6 flex gap-4 justify-self-end lg:col-start-12 lg:mb-0 lg:mt-6"
+            >
+              <svg class="h-4 w-4 cursor-pointer">
+                <use href="#edit"></use>
+              </svg>
+              <svg class="h-4 w-4 cursor-pointer">
+                <use href="#remove"></use>
+              </svg>
+            </div>
+          </li>
+        </ul>
+        <form
+          class="col-span-full row-start-6 mx-2 mt-4 flex lg:col-start-1 lg:col-end-7 lg:row-start-3 lg:mx-0 lg:mt-11"
         >
-          <h5 class="px-6 py-3">Apply</h5>
+          <input
+            type="text"
+            placeholder="Enter Discount Code"
+            name="search"
+            class="w-9/12 border-2 border-black py-3 pl-4 font-titillium text-sm leading-6 text-gray lg:ml-3 lg:w-6/12 xl:w-4/12"
+          />
+          <button
+            class="-ml-0.5 w-3/12 border-2 border-black px-6 py-3 font-bebas text-base leading-6 lg:-ml-0.5 lg:text-lg"
+          >
+            Apply
+          </button>
+        </form>
+        <button
+          class="col-span-full row-start-5 mx-2 mt-6 bg-black py-3 font-bebas text-base leading-6 text-white lg:col-start-9 lg:col-end-13 lg:row-start-3 lg:mx-0 lg:mt-11 lg:text-lg"
+        >
+          Update shopping cart
         </button>
-      </form>
-      <button
-        class="col-span-full row-start-5 mx-2 mt-6 bg-black py-3 text-white lg:col-start-7 lg:col-end-9 lg:row-start-3 lg:mx-0 lg:mt-11"
+      </main>
+
+      <aside
+        class="col-span-full row-start-2 text-black lg:col-start-10 lg:col-end-12"
       >
-        <h5>Update shopping cart</h5>
-      </button>
-    </main>
-    <div id="footer"></div>
+        <h2 class="hidden lg:block">Summary</h2>
+        <div class="mt-4 text-black">
+          <div
+            class="estimate-hidden flex cursor-pointer items-center justify-between bg-white px-6 py-4"
+            id="shipping-box"
+          >
+            <h4 id="shipping-text">ESTIMATE SHIPPING AND TAX</h4>
+            <svg id="expand" class="h-4 w-4">
+              <use href="#expand-svg"></use>
+            </svg>
+            <svg id="collapse" class="hidden h-4 w-4">
+              <use href="#collapse-svg"></use>
+            </svg>
+          </div>
+          <form class="mb-8 ml-6 mt-6 hidden lg:ml-0" id="shipping-info">
+            <div
+              class="flex flex-col font-titillium text-xs leading-6 lg:text-sm"
+            >
+              <label for="country" class="font-bold"> Country</label>
+              <div class="relative mb-4 mt-2">
+                <div class="flex">
+                  <select
+                    class="flex-1 appearance-none border-2 border-gray px-4 py-2 pr-8"
+                    name="country"
+                  >
+                    <option>United States</option>
+                  </select>
+                  <svg class="absolute right-0 top-0 mr-3 mt-5 h-4 w-4">
+                    <use href="#dropdown"></use>
+                  </svg>
+                </div>
+              </div>
+              <label for="state" class="font-bold">State/Province</label>
+              <input
+                class="mb-4 mt-2 border-2 border-gray"
+                name="state"
+                type="text"
+              />
+              <label for="zip" class="font-bold">Zip/Postal Code</label>
+              <input
+                class="mb-8 mt-2 border-2 border-gray"
+                name="zip"
+                type="number"
+              />
+              <label for="flat-rate" class="font-bold">Flat Rate</label>
+              <div class="flex items-center">
+                <input
+                  class="mx-4 accent-black"
+                  name="flat-rate"
+                  type="radio"
+                  checked
+                />
+                <div class="flex items-center gap-1">
+                  <h6 class="font-bold">Fixed</h6>
+                  <span
+                    class="font-titillium text-[10px] font-bold leading-4 text-gray lg:text-xs"
+                    >($5.00)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="my-px bg-white px-6 py-4">
+            <div class="flex items-center justify-between">
+              <h5>Subtotal</h5>
+              <h6>$150.00</h6>
+            </div>
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-1">
+                <h5>Shipping</h5>
+                <h6>(Flat Rate - Fixed)</h6>
+              </div>
+              <h6>$5.00</h6>
+            </div>
+          </div>
+          <div class="flex flex-col bg-white pb-6">
+            <div class="flex justify-between px-6 pt-4">
+              <h3>Order total</h3>
+              <h6
+                class="font-titillium text-sm font-bold leading-6 lg:text-base"
+              >
+                $155.00
+              </h6>
+            </div>
+            <button
+              class="mx-6 mb-6 mt-10 bg-green py-4 font-bebas text-lg leading-6 text-white lg:text-2xl"
+            >
+              Proceed to checkout
+            </button>
+            <div
+              class="text-center font-titillium text-[10px] font-bold uppercase leading-4 text-black underline hover:text-gray lg:text-[13px]"
+            >
+              <a href="#">Checkout with multiple addresses</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <footer
+      class="mt-6 grid grid-cols-12 justify-items-center gap-6 bg-black text-white lg:mt-28"
+    >
+      <h6 class="col-start-2 col-end-12 mt-6 block text-center lg:hidden">
+        © Jeep is a registered trademark of FCA US LLC.
+      </h6>
+      <nav class="col-span-full text-center">
+        <ul
+          class="flex flex-col items-center gap-6 font-titillium text-[10px] font-bold uppercase leading-4 text-white lg:flex-row lg:pt-14 lg:text-[13px]"
+        >
+          <li class="flex gap-6">
+            <a class="flex gap-3 underline hover:text-gray" href="#">
+              About us
+            </a>
+            <svg class="hidden h-5 w-2.5 lg:inline">
+              <use href="#line"></use>
+            </svg>
+          </li>
+          <li class="flex gap-6">
+            <a class="flex gap-3 underline hover:text-gray" href="#">
+              Contact us
+            </a>
+            <svg class="hidden h-5 w-2.5 lg:inline">
+              <use href="#line"></use>
+            </svg>
+          </li>
+          <li class="flex gap-6">
+            <a class="flex gap-3 underline hover:text-gray" href="#">
+              Search terms
+            </a>
+            <svg class="hidden h-5 w-2.5 lg:inline">
+              <use href="#line"></use>
+            </svg>
+          </li>
+          <li class="flex gap-6">
+            <a class="flex gap-3 underline hover:text-gray" href="#">
+              Privacy and Cookie Policy
+            </a>
+            <svg class="hidden h-5 w-2.5 lg:inline">
+              <use href="#line"></use>
+            </svg>
+          </li>
+          <li class="flex gap-6">
+            <a class="flex gap-3 underline hover:text-gray" href="#">
+              Installation Videos
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="col-span-full flex flex-col items-center gap-2 pb-6 lg:flex-row lg:gap-3 lg:pb-7 lg:pt-10"
+      >
+        <h6>Contact our Customer Service</h6>
+        <div class="flex items-center gap-2.5">
+          <svg class="h-4 w-4">
+            <use href="#phone"></use>
+          </svg>
+          <h6 class="font-bold">(800) 333-3567</h6>
+        </div>
+      </div>
+    </footer>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      class="hidden"
+    >
+      <defs>
+        <symbol id="line" viewBox="0 0 23 52">
+          <path
+            d="M1.30054 50.0343L20.7152 1.96576"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="square"
+          />
+        </symbol>
+
+        <symbol id="oval" width="6" height="6" viewBox="0 0 6 6">
+          <circle cx="3" cy="3" r="2" stroke="currentColor" />
+        </symbol>
+
+        <symbol id="oval-1" width="24" height="24" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="12" fill="currentColor" />
+        </symbol>
+
+        <symbol id="phone" width="16" height="16" viewBox="0 0 16 16">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.3344 0.701621L14.7672 2.1328C16.2223 3.59032 17.3557 7.38658 12.371 12.3722C9.96278 14.7795 7.62405 16 5.41781 16C3.56598 16 2.50357 15.1379 2.1324 14.7668L0.700424 13.3356C-0.233475 12.4017 -0.233475 10.8835 0.700424 9.94961L1.96638 8.68366C2.41816 8.23108 3.02 7.98204 3.65937 7.98204C4.29873 7.98204 4.90057 8.23108 5.35236 8.68366L6.45308 9.78438L9.78319 6.45428L8.68246 5.35355C7.74857 4.41966 7.74857 2.90147 8.68246 1.96757L9.94842 0.701621C10.4002 0.24904 11.002 0 11.6414 0C12.2808 0 12.8826 0.24904 13.3344 0.701621ZM11.0771 1.83028L9.81112 3.09623C9.49903 3.40833 9.49903 3.9128 9.81112 4.22489L10.6748 5.08855L13.0702 2.69394L12.2057 1.83028C12.0501 1.67463 11.8457 1.59641 11.6414 1.59641C11.4371 1.59641 11.2327 1.67463 11.0771 1.83028ZM1.82908 12.2069C1.51699 11.8948 1.51699 11.3904 1.82908 11.0783L3.09504 9.81232C3.25069 9.65667 3.45503 9.57845 3.65937 9.57845C3.86371 9.57845 4.06805 9.65667 4.2237 9.81232L5.08735 10.676L2.69354 13.0706L1.82908 12.2069ZM5.41781 14.4036C6.81147 14.4036 8.78144 13.7036 11.2423 11.2435C15.6037 6.88132 14.4351 4.05967 13.6345 3.25827L11.2391 5.65288L11.4762 5.88995C11.7883 6.20205 11.7883 6.70651 11.4762 7.01861L7.01741 11.4774C6.86176 11.633 6.65742 11.7113 6.45308 11.7113C6.24874 11.7113 6.0444 11.633 5.88875 11.4774L5.65168 11.2403C5.65168 11.2403 3.25787 13.6349 3.26106 13.6381C3.60828 13.9861 4.34103 14.4036 5.41781 14.4036Z"
+            fill="currentColor"
+          />
+        </symbol>
+
+        <symbol id="user" width="12" height="16">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0.941176 4.70588C0.941176 2.10635 3.04565 0 5.64706 0C8.24847 0 10.3529 2.10635 10.3529 4.70588C10.3529 7.30541 8.24847 9.41177 5.64706 9.41177C3.04565 9.41177 0.941176 7.30541 0.941176 4.70588ZM8.47059 4.70588C8.47059 3.14918 7.20376 1.88235 5.64706 1.88235C4.09035 1.88235 2.82353 3.14918 2.82353 4.70588C2.82353 6.26259 4.09035 7.52941 5.64706 7.52941C7.20376 7.52941 8.47059 6.26259 8.47059 4.70588ZM5.64706 12.2353C7.54918 12.2353 8.75388 12.9609 9.20753 13.5953C8.56471 13.84 7.35435 14.1176 5.64706 14.1176C3.77976 14.1176 2.62965 13.8306 2.05365 13.6075C2.48565 12.9346 3.72612 12.2353 5.64706 12.2353ZM0 14.1176C0 12.2353 2.11765 10.3529 5.64706 10.3529C9.07859 10.3529 11.2941 12.2353 11.2941 14.1176C11.2941 15.0588 8.95812 16 5.64706 16C2.11765 16 0 15.0588 0 14.1176Z"
+            fill="currentColor"
+          />
+        </symbol>
+
+        <symbol id="search" width="16" height="16" viewBox="0 0 16 16">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15.1203 10.9072L12.9828 8.73359C13.1999 8.0795 13.3294 7.38923 13.3294 6.66468C13.3294 2.99054 10.3388 0 6.66468 0C2.99054 0 0 2.99054 0 6.66468C0 10.3388 2.99054 13.3294 6.66468 13.3294C7.38923 13.3294 8.0814 13.1989 8.73359 12.9828L11.0158 15.2545C11.588 15.7363 12.2992 16 13.019 16C14.6633 16 16 14.6633 16 13.019C16 12.2192 15.6877 11.469 15.1203 10.9072ZM11.4061 9.8504L13.7788 12.2602C13.9739 12.4534 14.0949 12.7229 14.0949 13.019C14.0949 13.614 13.6121 14.0958 13.018 14.0958C12.721 14.0958 12.4525 13.9749 12.2411 13.7978L9.84945 11.4071C10.4645 10.992 10.9929 10.4636 11.4061 9.8504ZM6.66468 1.9042C4.03975 1.9042 1.9042 4.03975 1.9042 6.66468C1.9042 9.28962 4.03975 11.4252 6.66468 11.4252C9.28962 11.4252 11.4252 9.28962 11.4252 6.66468C11.4252 4.03975 9.28962 1.9042 6.66468 1.9042Z"
+            fill="currentColor"
+          />
+        </symbol>
+
+        <symbol id="shopping-cart" width="16" height="16" viewBox="0 0 16 16">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15.6097 2.54418C15.4588 2.37115 15.2415 2.27159 15.0124 2.27159H4.09369L3.93961 1.35189C3.8764 0.971049 3.54692 0.691345 3.16055 0.691345H1.38277C0.945837 0.691345 0.592651 1.04453 0.592651 1.48147C0.592651 1.91841 0.945837 2.27159 1.38277 2.27159H2.49132L3.96095 11.0925L3.9965 11.1905L4.03917 11.3098L4.13398 11.4512L4.20905 11.5397L4.36154 11.6425L4.45003 11.6938C4.54169 11.731 4.63808 11.7531 4.74001 11.7531H13.4322C13.8691 11.7531 14.2223 11.3999 14.2223 10.9629C14.2223 10.526 13.8691 10.1728 13.4322 10.1728H5.41003L5.27887 9.3827H14.2223C14.6158 9.3827 14.9492 9.09352 15.0045 8.70478L15.7946 3.17391C15.827 2.94636 15.7591 2.71643 15.6097 2.54418ZM14.1014 3.85184L13.8762 5.43209H11.0618V3.85184H14.1014ZM10.2717 5.43209V3.85184H7.90129V5.43209H10.2717ZM10.2717 6.22221V7.80246H7.90129V6.22221H10.2717ZM7.11117 5.43209V3.85184H4.3568L4.62386 5.45579L4.7408 5.43209H7.11117ZM4.75186 6.22221H7.11117V7.80246H5.01497L4.75186 6.22221ZM11.0618 6.22221V7.80246H13.5372L13.7624 6.22221H11.0618Z"
+            fill="currentColor"
+          />
+          <circle cx="5.62964" cy="14.5185" r="1.18519" fill="currentColor" />
+          <circle cx="12.7408" cy="14.5185" r="1.18519" fill="currentColor" />
+        </symbol>
+
+        <symbol id="dropdown" width="8" height="6" viewBox="0 0 8 6">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.91613 0.142883C7.48747 0.142883 7.95117 0.654883 7.95117 1.28574C7.95117 1.59603 7.83835 1.87603 7.65774 2.08345C6.32564 3.5926 4.32853 5.85717 4.32853 5.85717C4.32853 5.85717 2.33142 3.5926 0.99984 2.08174C0.818708 1.87603 0.705889 1.59603 0.705889 1.28574C0.705889 0.654883 1.16959 0.142883 1.74093 0.142883L6.91613 0.142883ZM6.87473 1.33317L6.9151 1.2846L1.74093 1.28574L1.75956 1.30745L4.32853 4.21945L6.87473 1.33317Z"
+            fill="currentColor"
+          />
+        </symbol>
+
+        <symbol id="edit" width="16" height="17" viewBox="0 0 16 17">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15.6303 3.62326L13.2059 1.22088C12.9592 0.976383 12.6358 0.854553 12.3124 0.854553C11.9882 0.854553 11.6657 0.976383 11.4189 1.22088L8.42105 4.19235H0.842105C0.377263 4.19235 0 4.56535 0 5.0268V15.8746C0 16.3361 0.377263 16.7091 0.842105 16.7091H11.7895C12.2543 16.7091 12.6316 16.3361 12.6316 15.8746V8.3646L15.6303 5.39313C15.8771 5.14863 16 4.8282 16 4.50777C16 4.18735 15.8771 3.86775 15.6303 3.62326ZM7.15791 11.4287L5.32886 9.61627L10.6282 4.36508L12.4573 6.17751L7.15791 11.4287ZM6.47998 11.7533L5.00128 10.3114L5.05265 11.7024L6.47998 11.7533ZM10.9474 15.0402H1.6842V5.86125H6.73685L4.05895 8.5148C3.81221 8.7593 3.65642 9.19237 3.52926 9.59041C3.39452 10.0076 3.36842 10.4716 3.36842 10.817V13.3713H5.94611C6.29474 13.3713 6.87917 13.2879 7.26906 13.1293L7.3786 13.0852C7.72723 12.9451 8.04673 12.8167 8.26949 12.5953L10.9474 10.0335V15.0402ZM11.2236 3.77513L13.0526 5.58755L14.1406 4.50861L12.3124 2.69618L11.2236 3.77513Z"
+            fill="currentColor"
+          />
+        </symbol>
+
+        <symbol id="remove" width="16" height="17" viewBox="0 0 16 17">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8 0.854553C3.58844 0.854553 0 4.41126 0 8.78183C0 13.1524 3.58844 16.7091 8 16.7091C12.4116 16.7091 16 13.1524 16 8.78183C16 4.41126 12.4116 0.854553 8 0.854553ZM8 14.9475C4.56977 14.9475 1.77777 12.1817 1.77777 8.78183C1.77777 5.38191 4.56977 2.61617 8 2.61617C11.4302 2.61617 14.2222 5.38191 14.2222 8.78183C14.2222 12.1817 11.4302 14.9475 8 14.9475ZM10.9804 6.45121L8.62843 8.78183L10.9813 11.1133C11.1538 11.2851 11.1538 11.5652 10.9813 11.7361C10.8942 11.8215 10.7804 11.8647 10.6667 11.8647C10.5529 11.8647 10.4391 11.8215 10.352 11.7352L7.99998 9.40456L5.64797 11.7361C5.56086 11.8215 5.44708 11.8647 5.33331 11.8647C5.21953 11.8647 5.10575 11.8215 5.01953 11.7352C4.84619 11.5643 4.84619 11.2842 5.01953 11.1124L7.37153 8.78183L5.01953 6.45033C4.84619 6.27945 4.84619 5.99935 5.01953 5.8276C5.19197 5.65672 5.47464 5.65672 5.64797 5.8276L7.99998 8.15909L10.352 5.82848C10.5244 5.6576 10.8071 5.6576 10.9804 5.82848C11.1529 6.00023 11.1529 6.28033 10.9804 6.45121Z"
+            fill="currentColor"
+          />
+        </symbol>
+
+        <symbol id="expand-svg" width="16" height="16" viewBox="0 0 16 16">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.33333 13.3333C5.33333 14.8036 6.52978 16 8 16C9.47022 16 10.6667 14.8036 10.6667 13.3493L10.7156 10.6196L13.3333 10.6667C14.8036 10.6667 16 9.47022 16 8C16 6.52978 14.8036 5.33333 13.3493 5.33333L10.7156 5.28533L10.6667 2.66667C10.6667 1.19644 9.47022 0 8 0C6.52978 0 5.33333 1.19644 5.33333 2.68267L5.38044 5.28533L2.66667 5.33333C1.19644 5.33333 0 6.52978 0 8C0 9.47022 1.19644 10.6667 2.68267 10.6667L5.38044 10.6196L5.33333 13.3333ZM7.11111 13.3493V8.88889H2.66667C2.17689 8.88889 1.77778 8.48978 1.77778 8C1.77778 7.51022 2.16089 7.11111 2.66667 7.11111H7.11111V2.66667C7.11111 2.17689 7.51022 1.77778 8 1.77778C8.48978 1.77778 8.88889 2.16089 8.88889 2.66667V7.11111H13.3333C13.8231 7.11111 14.2222 7.51022 14.2222 8C14.2222 8.48978 13.8231 8.88889 13.3493 8.88889H8.88889V13.3333C8.88889 13.8231 8.48978 14.2222 8 14.2222C7.51022 14.2222 7.11111 13.8231 7.11111 13.3493Z"
+            fill="currentColor"
+          />
+        </symbol>
+
+        <symbol id="collapse-svg" width="17" height="16" viewBox="0 0 17 16">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10.1672 14.9934C10.8165 15.6427 11.6788 16 12.5973 16C13.5158 16 14.3781 15.6427 15.0263 14.9945C15.6756 14.3452 16.0329 13.4817 16.0329 12.5644C16.0329 11.6471 15.6756 10.7836 15.0263 10.1354L12.8756 7.98354L15.0263 5.83284C15.6756 5.1835 16.0329 4.32001 16.0329 3.4027C16.0329 2.48539 15.6756 1.6219 15.0274 0.973714C13.7288 -0.323808 11.4658 -0.323808 10.1683 0.973714L8.01646 3.12556L5.86576 0.973714C4.56709 -0.324953 2.30416 -0.323808 1.00664 0.972569C0.357305 1.6219 0 2.48539 0 3.4027C0 4.32001 0.357305 5.1835 1.00664 5.83169L3.15734 7.98354L1.00664 10.1342C0.357305 10.7836 0 11.6471 0 12.5644C0 13.4817 0.357305 14.3452 1.00549 14.9934C2.30416 16.2909 4.56709 16.2909 5.86461 14.9934L8.01646 12.8415L10.1672 14.9934ZM11.7876 13.374L8.01646 9.60286L4.24529 13.3752C3.81355 13.8069 3.05885 13.8081 2.62596 13.374C2.40952 13.1576 2.29042 12.8713 2.29042 12.5644C2.29042 12.2575 2.40952 11.9712 2.62596 11.7547L6.39599 7.98354L2.62596 4.21236C2.40952 3.99592 2.29042 3.70847 2.29042 3.4027C2.29042 3.09693 2.40952 2.80948 2.62596 2.59304C3.05771 2.1613 3.8124 2.16015 4.24529 2.59304L8.01646 6.36421L11.7876 2.59189C12.2194 2.16015 12.9741 2.159 13.407 2.59304C13.6234 2.80948 13.7425 3.09693 13.7425 3.4027C13.7425 3.70847 13.6234 3.99592 13.407 4.21236L9.63693 7.98354L13.407 11.7547C13.6234 11.9712 13.7425 12.2575 13.7425 12.5644C13.7425 12.8713 13.6234 13.1576 13.407 13.374C12.9752 13.8058 12.2205 13.8069 11.7876 13.374Z"
+            fill="currentColor"
+          />
+        </symbol>
+
+        <symbol
+          id="menu"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+        >
+          <circle cx="20" cy="20" r="20" fill="#F5F5F5" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M14.4 12H25.6C26.9232 12 28 13.0768 28 14.4C28 15.7232 26.9232 16.8 25.6 16.8H14.4C13.0768 16.8 12 15.7232 12 14.4C12 13.0768 13.0768 12 14.4 12ZM25.6 13.6C26.04 13.6 26.4 13.96 26.4 14.4C26.4 14.84 26.04 15.2 25.6 15.2H14.4C13.96 15.2 13.6 14.84 13.6 14.4C13.6 13.96 13.96 13.6 14.4 13.6H25.6ZM14.4 17.6H25.6C26.9232 17.6 28 18.6768 28 20C28 21.3232 26.9232 22.4 25.6 22.4H14.4C13.0768 22.4 12 21.3232 12 20C12 18.6768 13.0768 17.6 14.4 17.6ZM25.6 19.2C26.04 19.2 26.4 19.56 26.4 20C26.4 20.44 26.04 20.8 25.6 20.8H14.4C13.96 20.8 13.6 20.44 13.6 20C13.6 19.56 13.96 19.2 14.4 19.2H25.6ZM14.4 23.2H25.6C26.9232 23.2 28 24.2768 28 25.6C28 26.9232 26.9232 28 25.6 28H14.4C13.0768 28 12 26.9232 12 25.6C12 24.2768 13.0768 23.2 14.4 23.2ZM26.4 25.6C26.4 25.16 26.04 24.8 25.6 24.8H14.4C13.96 24.8 13.6 25.16 13.6 25.6C13.6 26.04 13.96 26.4 14.4 26.4H25.6C26.04 26.4 26.4 26.04 26.4 25.6Z"
+            fill="#2F2F2F"
+          />
+        </symbol>
+
+        <symbol id="inchoo" width="154" height="36" viewBox="0 0 154 36">
+          <g clip-path="url(#clip0_14_1204)">
+            <g id="Page-1">
+              <g id="logo">
+                <g id="Layer%201">
+                  <path
+                    id="type"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M45.9165 15.6209H44.4928V31.7487C44.4928 33.7732 45.9313 35.0603 47.8566 35.0603H49.3543L49.3498 19.0832C49.3498 17.2441 48.2567 15.6209 45.9165 15.6209ZM46.8133 8.02429C45.2409 8.02429 43.9609 9.31169 43.9609 10.8938C43.9609 12.4754 45.2409 13.799 46.8133 13.799C48.3862 13.799 49.7031 12.4754 49.7031 10.8938C49.7031 9.31169 48.3862 8.02429 46.8133 8.02429ZM62.9638 14.7558C61.2518 14.7558 59.6096 15.9126 58.1936 17.4688C57.7126 16.3937 56.7063 15.6209 55.0995 15.6209H53.6757V25.4851V31.7487V31.8241C53.6757 32.5177 53.8683 33.1486 54.2211 33.6654C54.8095 34.5491 55.8264 35.0603 57.0392 35.0603H57.1128H58.5367H58.5746V24.3273C58.5746 20.9855 60.0733 19.1338 62.1952 19.1338C64.7189 19.1338 66.1449 20.6034 66.1449 23.9514V31.8241C66.1449 33.6626 67.535 35.0603 69.7292 35.0603H71.045V23.5089C71.045 17.8824 68.1489 14.7558 62.9638 14.7558ZM101.708 14.7558C99.8431 14.7558 98.1601 16.2269 97.4295 17.4048V11.7387C97.4295 9.90016 96.2953 8.57632 93.9557 8.57632H92.4205V31.7487C92.4205 33.7732 93.4798 35.0603 95.7841 35.0603H97.3927V23.8038C97.3927 20.3104 99.4042 19.1338 100.94 19.1338C103.097 19.1338 104.853 20.4216 104.853 23.6569V31.7487C104.853 33.8831 106.131 35.0603 108.181 35.0603H109.789V23.4361C109.789 17.809 106.79 14.7558 101.708 14.7558ZM122.658 14.7558C116.295 14.7558 112.894 19.5382 112.894 25.4957C112.894 30.7555 116.295 35.5021 122.218 35.5021C128.58 35.5021 131.981 30.7555 131.981 24.798C131.981 19.5382 128.58 14.7558 122.658 14.7558ZM122.658 31.0877C119.403 31.0877 117.976 28.7335 117.976 24.798C117.976 21.5238 119.403 19.1705 122.218 19.1705C125.436 19.1705 126.9 21.5238 126.9 25.4957C126.9 28.7335 125.51 31.0877 122.658 31.0877ZM144.414 14.9675C138.05 14.9675 134.649 19.7492 134.649 25.7074C134.649 30.9671 138.05 35.7135 143.973 35.7135C150.338 35.7135 153.739 30.9671 153.739 25.0094C153.739 19.7492 150.338 14.9675 144.414 14.9675ZM144.414 31.2993C141.158 31.2993 139.733 28.9449 139.733 25.0094C139.733 21.7351 141.158 19.3819 143.973 19.3819C147.194 19.3819 148.655 21.7351 148.655 25.7074C148.655 28.9449 147.265 31.2993 144.414 31.2993ZM84.6506 30.9382C80.8606 30.9382 79.1549 28.4739 79.1549 24.868C79.1549 21.926 81.763 19.6742 84.5306 19.6076L85.6664 19.5618C89.391 19.4528 89.036 15.2224 89.036 15.2224L85.5542 15.0833C77.5326 15.0833 74.0357 19.9396 74.0357 25.6041C74.0357 31.2689 78.5197 35.4987 83.4661 35.4987C90.2407 35.4987 89.6595 30.6217 89.6595 30.6217C89.6595 30.6217 86.4844 30.9382 84.6506 30.9382Z"
+                    fill="#404041"
+                  />
+                  <path
+                    id="icon"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.72803 35.1002C4.24206 35.1002 0.435303 31.04 0.435303 25.5674V0.0394897H25.3031C30.6988 0.0394897 34.7685 4.36414 34.7685 9.74974V35.1002H9.72803ZM30.7698 9.74974C30.7698 7.13658 29.0591 4.4134 25.3031 4.4134H4.34647V25.5674C4.34647 28.0681 5.69131 30.7272 9.72803 30.7272H25.5289L14.7894 18.4461C14.4794 18.0354 14.2949 17.5222 14.2949 16.9668C14.2949 15.6149 15.3844 14.5187 16.7286 14.5187C17.2424 14.5187 17.7204 14.6788 18.1138 14.9527L30.7698 24.8574V9.74974ZM10.4179 13.799C8.84605 13.799 7.56646 12.4754 7.56646 10.8938C7.56646 9.31168 8.84605 8.02429 10.4179 8.02429C11.9914 8.02429 13.3077 9.31168 13.3077 10.8938C13.3077 12.4754 11.9914 13.799 10.4179 13.799Z"
+                    fill="#79AD36"
+                  />
+                </g>
+              </g>
+            </g>
+          </g>
+          <defs>
+            <clipPath id="clip0_14_1204">
+              <rect width="154" height="36" fill="currentColor" />
+            </clipPath>
+          </defs>
+        </symbol>
+      </defs>
+    </svg>
     <script defer src="src/script/script.js"></script>
   </body>
 </html>

@@ -13,7 +13,7 @@
   }
 
   h3 {
-    @apply block font-bebas text-lg leading-6 lg:text-2xl;
+    @apply font-bebas text-lg leading-6 lg:text-2xl;
   }
 
   h4 {
@@ -27,20 +27,30 @@
   h6 {
     @apply font-titillium text-xs leading-6 lg:text-sm;
   }
+}
 
-  .text-s {
-    @apply font-titillium text-sm leading-6 lg:text-base;
+@layer components {
+  #expand {
+    @apply hidden;
   }
 
-  .input {
-    @apply text-gray font-titillium text-sm leading-6;
+  #collapse {
+    @apply inline text-green;
   }
 
-  .xs {
-    @apply text-green font-titillium text-[10px] font-bold leading-4 lg:text-xs;
+  #shipping-text {
+    @apply text-green;
   }
 
-  .link {
-    @apply hover:text-gray font-titillium text-[10px] font-bold uppercase leading-4 text-white underline lg:text-[13px];
+  .estimate-hidden #expand {
+    @apply inline;
+  }
+
+  .estimate-hidden #collapse {
+    @apply hidden;
+  }
+
+  .estimate-hidden #shipping-text {
+    @apply text-black;
   }
 }

@@ -19,6 +19,6 @@ module.exports = {
       green: "#008421"
     },
   },
-  plugins: [],
+  plugins: []
 };
 
